@@ -20,7 +20,7 @@ const userRegistrationDates = {}; // This should be replaced with a proper datab
 passport.use(new DiscordStrategy({
     clientID: '1230902267646050344',
     clientSecret: 'SQxaKbB_fcqv-3tfZC5C9W5WsBNTi8ju',
-    callbackURL: 'http://localhost:3000/auth/discord/callback',
+    callbackURL: 'https://host.completelywinter.xyz/auth/discord/callback',
     scope: ['identify']
 }, (accessToken, refreshToken, profile, done) => {
     const userId = profile.id;
