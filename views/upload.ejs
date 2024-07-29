@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles.css">
+    <title>Winterhost</title>
+</head>
+<body>
+    <!-- Include the navbar partial and pass the user object -->
+    <%- include('partials/navbar', { user: user || null }) %>
+    <div class="container">
+        <div class="upload-container">
+            <h1>Upload Files</h1>
+            <h4>(Max file size 100MB)</h4>
+            <div>
+                <input type="file" id="fileInput">
+                <button type="button" id="uploadButton">Upload</button>
+            </div>
+            <div id="fileContent"></div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
+

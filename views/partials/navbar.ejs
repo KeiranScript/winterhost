@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <ul class="navbar-list">
+        <% if (user) { %>
+            <li><a href="/upload">Upload</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/gallery">Gallery</a></li> <!-- Added Gallery link -->
+            <% if (isAdmin) { %>
+                <li><a href="/admin">Admin Panel</a></li>
+            <% } %>
+            <li><a href="/logout">Logout</a></li>
+        <% } else { %>
+            <li><a href="/auth/discord">Login with Discord</a></li>
+        <% } %>
+    </ul>
+</nav>
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/styles.css">
+    <title>Winterhost</title>
+</head>
+<body>
+    <%- include('partials/navbar', { user: user, isAdmin: isAdmin }) %>
+    <div class="container">
+        <div class="upload-container">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <img src="<%= user.avatar ? `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png` : 'https://cdn.discordapp.com/embed/avatars/0.png' %>" alt="Profile Picture" class="profile-pic">
+                <h2><%= user.username %></h2>
+                <p class="user-description">
+                    <strong>Total Uploaded Files:</strong> <%= user.totalFiles %> <br>
+                    <strong>Registration Date:</strong> <%= user.createdAt ? new Date(user.createdAt).toLocaleDateString() : 'Unknown' %> <br>
+                </p>
+            </div>
+            <div class="motd">
+                <h3>Message of the Day</h3>
+                <p><%= motd %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
